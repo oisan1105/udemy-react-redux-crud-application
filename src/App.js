@@ -1,7 +1,13 @@
 
 
 function App() {
-  return (<div><h1>Hello, world!</h1></div>);
+  return (
+<div>
+  <label htmlFor="bar">bar</label>
+  <input type="test" onChange={() => {console.log("i am clicked.")}}/>;
+</div>
+  )
 }
+
 
 export default App;
