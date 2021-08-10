@@ -1,12 +1,11 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
 function App() {
   const profiles = [
     { name: "Taro", age: 10 },
     { name: "Hanako", age: 5 },
-    { name: "Noname",  },
-
-    
+    { name: "Noname", age:3 },
   ]
   return (
 <div>
@@ -19,22 +18,16 @@ function App() {
   )
 }
 
-// function App() {
-//   const [state, setstate] = useState(false)
-//   return (
-//   <div>
-//     <button onClick={() => setstate(!state)}></button>
-//     <p>Text:{state ? "A":"B"}</p>
-//   </div>
-//   )
-// }
+
 
 const User = (props) => {
   return <div>Hi, I am {props.name}, and {props.age} years old! </div>
 }
 
-User.defaultProps = {
-  age: 1
+
+User.propTyepes = {
+  name: PropTypes.string,
+  age : PropTypes.number.isRequired
 }
 
 
